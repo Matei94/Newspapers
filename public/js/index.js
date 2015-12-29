@@ -1,3 +1,11 @@
+/*** VARIABLES ***********************************************************************************/
+
+var selectedColor = 'rgb(255, 0, 0)'
+
+/*************************************************************************************************/
+
+
+
 /*** DOCUMENT READY ******************************************************************************/
 
 $(document).ready(function() {
@@ -9,6 +17,21 @@ $(document).ready(function() {
     if (isSecondPageSizeSet == false) {
       secondPageSize();
       isSecondPageSizeSet = true;
+    }
+  });
+
+  var firstClick = false;
+  var defaultColor;
+  $('#mylist').delegate('li', 'click', function () {
+    if (firstClick == false) {
+      defaultColor = $(this).children().css("background-color");
+      firstClick = true;
+    }
+
+    if ($(this).children().css("background-color") != selectedColor) {
+      $(this).children().css("background-color", selectedColor);
+    } else {
+      $(this).children().css("background-color", defaultColor);
     }
   });
 });
