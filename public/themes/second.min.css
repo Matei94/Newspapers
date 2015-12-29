@@ -13,15 +13,15 @@
 /* Globals */
 /* Font
 -----------------------------------------------------------------------------------------------------------*/
-#mypage {
+#mypage, #mypage2 {
 	height: 100%;
 }
 
-#mycontent {
+#mycontent, #mycontent2 {
 	height: inherit;
 }
 
-#mylist {
+#mylist, #mylist2 {
 	max-height: 100%;
 	margin-bottom: 0px;
 	overflow-y: auto;
