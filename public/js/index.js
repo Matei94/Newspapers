@@ -2,8 +2,10 @@
 
 $(document).ready(function() {
   firstPageSize();
+
   var isSecondPageSizeSet = false;
-  $(document).on("pageshow","#mypage2",function() {
+  $(document).on("pageshow", "#mypage2", function() {
+    console.log("mypage2");
     if (isSecondPageSizeSet == false) {
       secondPageSize();
       isSecondPageSizeSet = true;
@@ -12,6 +14,10 @@ $(document).ready(function() {
 });
 
 /*************************************************************************************************/
+
+
+
+/*** FUNCTIONS ***********************************************************************************/
 
 function firstPageSize() {
   /* Page height */
@@ -56,3 +62,5 @@ function secondPageSize() {
   $("#topcontentright2").css('width', topcontentWidth - navbuttonWidth -
                                       2 * navbuttonMargin);
 }
+
+/*************************************************************************************************/
