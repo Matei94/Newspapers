@@ -17,11 +17,23 @@
 
   <body>
 
+    <!-- First page =========================================================================== -->
     <div data-role="page" data-theme="a" id="mypage">
       <div data-role="content" data-theme="a" id="mycontent">
-        <form id="searchbox">
-          <input id="searchboxinput" data-type="search" placeholder="Type to search...">
-        </form>
+
+        <fieldset class="ui-grid-a" id="topcontent">
+          <div class="ui-block-a" id="topcontentleft">
+            <form id="searchbox">
+              <input id="searchboxinput" data-type="search" placeholder="Type to search...">
+            </form>
+          </div>
+          <div class="ui-block-b" id="topcontentright">
+            <a href="#secondpage" class="ui-btn ui-icon-arrow-r ui-btn-icon-notext ui-corner-all"
+               id="gorightbutton">
+            </a>
+          </div>
+        </fieldset>
+
         <ul data-role="listview" data-inset="true" data-filter="true" data-input="#searchboxinput"
             id="mylist">
           <li><a href="#">Acura</a></li>
@@ -50,8 +62,58 @@
           <li><a href="#">Cadillac</a></li>
           <li><a href="#">Ferrari</a></li>
         </ul>
-      </div>
+      </div> <!-- mycontent -->
     </div>
+    <!-- First page =========================================================================== -->
+
+    <!-- Second page ========================================================================== -->
+    <div data-role="page" data-theme="a" id="secondpage">
+      <div data-role="content" data-theme="a" id="mycontent">
+
+        <fieldset class="ui-grid-a" id="topcontent">
+          <div class="ui-block-a" id="topcontentleft">
+            <form id="searchbox">
+              <input id="searchboxinput" data-type="search" placeholder="Type to search...">
+            </form>
+          </div>
+          <div class="ui-block-b" id="topcontentright">
+            <a href="#mypage" class="ui-btn ui-icon-arrow-r ui-btn-icon-notext ui-corner-all"
+               id="gorightbutton">
+            </a>
+          </div>
+        </fieldset>
+
+        <ul data-role="listview" data-inset="true" data-filter="true" data-input="#searchboxinput"
+            id="mylist">
+          <li><a href="#">Acura</a></li>
+          <li><a href="#">Audi</a></li>
+          <li><a href="#">BMW</a></li>
+          <li><a href="#">Cadillac</a></li>
+          <li><a href="#">Ferrari</a></li>
+          <li><a href="#">Acura</a></li>
+          <li><a href="#">Audi</a></li>
+          <li><a href="#">BMW</a></li>
+          <li><a href="#">Cadillac</a></li>
+          <li><a href="#">Ferrari</a></li>
+          <li><a href="#">Acura</a></li>
+          <li><a href="#">Audi</a></li>
+          <li><a href="#">BMW</a></li>
+          <li><a href="#">Cadillac</a></li>
+          <li><a href="#">Ferrari</a></li>
+          <li><a href="#">Acura</a></li>
+          <li><a href="#">Audi</a></li>
+          <li><a href="#">BMW</a></li>
+          <li><a href="#">Cadillac</a></li>
+          <li><a href="#">Ferrari</a></li>
+          <li><a href="#">Acura</a></li>
+          <li><a href="#">Audi</a></li>
+          <li><a href="#">BMW</a></li>
+          <li><a href="#">Cadillac</a></li>
+          <li><a href="#">Ferrari</a></li>
+        </ul>
+      </div> <!-- mycontent -->
+    </div>
+    <!-- Second page ========================================================================== -->
 
     <script src='js/index.js'></script>
   </body>
