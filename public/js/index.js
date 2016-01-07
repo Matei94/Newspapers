@@ -26,6 +26,7 @@ $(document).ready(function() {
   $('#mylist').delegate('li', 'click', function () {
     var id = $(this).attr('id');
     var price = parseFloat($('#' + id + "_price").html());
+    price = parseFloat(price.toFixed(2));
 
     if (firstClick == false) {
       defaultColor = $(this).children().css("background-color");
@@ -40,6 +41,7 @@ $(document).ready(function() {
       total -= price;
     }
 
+    total = parseFloat(total.toFixed(2));
     $('#total').html('Total: ' + total + " RON");
   });
 
