@@ -1,6 +1,7 @@
 /*** VARIABLES ***********************************************************************************/
 
-var selectedColor = 'rgb(255, 0, 255)'
+var selectedColor = 'rgb(255, 0, 255)';
+var total = 0;
 
 /*************************************************************************************************/
 
@@ -23,6 +24,9 @@ $(document).ready(function() {
   var firstClick = false;
   var defaultColor;
   $('#mylist').delegate('li', 'click', function () {
+    var id = $(this).attr('id');
+    var price = parseFloat($('#' + id + "_price").html());
+
     if (firstClick == false) {
       defaultColor = $(this).children().css("background-color");
       firstClick = true;
@@ -30,9 +34,17 @@ $(document).ready(function() {
 
     if ($(this).children().css("background-color") != selectedColor) {
       $(this).children().css("background-color", selectedColor);
+      total += price;
     } else {
       $(this).children().css("background-color", defaultColor);
+      total -= price;
     }
+
+    $('#total').html('Total: ' + total + " RON");
+  });
+
+  $("#finish").click(function() {
+    window.location.replace(window.location.pathname);
   });
 });
 

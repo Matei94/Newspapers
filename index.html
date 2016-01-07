@@ -28,28 +28,33 @@
             </form>
           </div>
           <div class="ui-block-b" id="topcontentright">
-            <a href="#mypage2" class="ui-btn ui-icon-arrow-r ui-btn-icon-notext ui-corner-all"
-               id="navbutton" data-transition="slide">
-            </a>
+            <a id="navbutton" href="#popupDialog" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn ui-icon-arrow-r ui-btn-icon-notext ui-corner-all"></a>
+            <div data-role="popup" id="popupDialog" data-overlay-theme="a" data-dismissible="false">
+                <div role="main" class="ui-content">
+                    <h3 id='total' class="ui-title" align="center">Total: 0 RON</h3>
+                    <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Cancel</a>
+                    <a id='finish' href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b">Finish</a>
+                </div>
+            </div>
           </div>
         </fieldset>
 
         <ul data-role="listview" data-inset="true" data-filter="true" data-input="#searchboxinput"
             id="mylist" data-icon="false">
           <li id="n0">
-            <a href="#"><img src="img/news.png" class="ui-li-icon ui-corner-none">Actualitatea</a>
+            <a href="#"><img src="img/news.png" class="ui-li-icon ui-corner-none">Actualitatea <span id='n0_price' class="ui-li-count">12</span></a></a>
           </li>
           <li id="n1">
-            <a href="#"><img src="img/cd.png" class="ui-li-icon ui-corner-none">Actualitatea - CD</a>
+            <a href="#"><img src="img/cd.png" class="ui-li-icon ui-corner-none">Actualitatea - CD <span id='n1_price' class="ui-li-count">12</span></a></a>
           </li>
           <li id="n2">
-            <a href="#"><img src="img/book.png" class="ui-li-icon ui-corner-none">Actualitatea - Carte</a>
+            <a href="#"><img src="img/book.png" class="ui-li-icon ui-corner-none">Actualitatea - Carte <span id='n2_price' class="ui-li-count">12</span></a></a>
           </li>
           <li id="n3">
-            <a href="#"><img src="img/news.png" class="ui-li-icon ui-corner-none">Banateanul</a>
+            <a href="#"><img src="img/news.png" class="ui-li-icon ui-corner-none">Banateanul <span  id='n3_price' class="ui-li-count">12</span></a></a>
           </li>
           <li id="n4">
-            <a href="#"><img src="img/news.png" class="ui-li-icon ui-corner-none">Ziarul de Vrancea</a>
+            <a href="#"><img src="img/news.png" class="ui-li-icon ui-corner-none">Ziarul de Vrancea <span id='n4_price' class="ui-li-count">12</span></a></a>
           </li>
         </ul>
       </div> <!-- mycontent -->
